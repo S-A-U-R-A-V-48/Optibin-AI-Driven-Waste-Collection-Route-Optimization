@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AI Waste Optimizer — Central Configuration
+# All system parameters live here. Modify without touching source code.
+# ─────────────────────────────────────────────────────────────────────────────
+
+simulation:
+  n_bins: 50
+  n_days: 30
+  sensor_interval_minutes: 15
+  random_seed: 42
+  zones:
+    Residential:  25
+    Commercial:   15
+    Industrial:    7
+    Park:          3
+
+fleet:
+  n_trucks: 5
+  truck_capacity_liters: 1000
+  bin_capacity_liters: 240
+  depot_lat: 0.5
+  depot_lon: 0.5
+
+thresholds:
+  high_priority: 0.80        # >= 80% fill → HIGH alert
+  collection_trigger: 0.60   # >= 60% fill → schedule for next window
+  overflow_alert: 0.95       # >= 95% → immediate dispatch
+
+collection_windows:
+  morning_start: "05:00"
+  morning_end: "09:00"
+  afternoon_start: "14:00"
+  afternoon_end: "18:00"
+
+ml:
+  test_size: 0.20
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  forecast_horizon_hours: 24
+  window_size: 8             # lookback window for time-series features
+
+rl:
+  episodes: 600
+  learning_rate: 0.1
+  discount_factor: 0.95
+  epsilon_start: 1.0
+  epsilon_min: 0.01
+  epsilon_decay: 0.995
+  n_priority_bins: 10        # bins considered per episode
+
+cvrp:
+  max_iterations_2opt: 100
+  time_limit_seconds: 30
+
+paths:
+  data_dir: "data"
+  outputs_dir: "outputs"
+  sample_data: "data/sample/bins_metadata.csv"

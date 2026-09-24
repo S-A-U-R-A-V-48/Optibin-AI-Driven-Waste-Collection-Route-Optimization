@@ -1,0 +1,8 @@
+bin_id,zone,lat,lon,base_fill_rate,capacity_liters
+BIN_000,Residential,0.1523,0.3841,0.03412,240
+BIN_001,Residential,0.7234,0.2109,0.03891,240
+BIN_002,Residential,0.3812,0.6754,0.02987,240
+BIN_003,Commercial,0.5123,0.8234,0.05234,240
+BIN_004,Commercial,0.4512,0.1234,0.06123,240
+BIN_005,Industrial,0.8901,0.7654,0.02534,240
+BIN_006,Park,0.2345,0.5432,0.01987,240

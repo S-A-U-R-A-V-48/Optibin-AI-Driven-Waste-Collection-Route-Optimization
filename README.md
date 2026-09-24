@@ -11,7 +11,7 @@
 
 **End-to-end AI system for smart city waste collection — from IoT sensor simulation to optimized truck routes and KPI dashboards.**
 
-*Academic Prototype | BIT Mesra, Ranchi | Civil Engineering — Sem VIII*
+*Academic Prototype | BIT Mesra, Ranchi *
 
 </div>
 
